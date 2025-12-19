@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book your Event</title>
+    <link rel="icon" href="booking icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button class="menu" id="menu-btn">☰</button>
+        <h1>BookMyEvents</h1>
+        <div class="search-container">🔍︎
+            <input id="searchEvent" type="text" class="search" placeholder="Search events...">
+        </div>
+    </nav>
+    <center>
+        <h3>Book India’s Top Events, All in One Place!</h3>
+    </center>
+
+    <div class="sidebar" id="sidebar">
+        <button class="side-menu" id="side-menu">☰</button>
+        <div class="sidebar-elts">
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#add-event-div">Add Event</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <center>
+        <div id="home">
+            <section class="why-us" style="margin: 50px 20px;">
+                <h2>Why Choose BookMyEvents ?</h2>
+                <ul>
+                    <li>🎶 Access to concerts, festivals, and award shows across India</li>
+                    <li>💸 Transparent pricing & secure payment</li>
+                    <li>⏱️ Quick online booking, zero queue hassle</li>
+                    <li>⭐ Trusted by thousands of event-goers nationwide</li>
+                </ul>
+            </section>
+        </div>
+    </center>
+    <div class="events" id="events">
+
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="add-event">
+        <h1>Enter event details</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Event name: </td>
+                    <td><input id="new-event-title" type="text" placeholder="Enter event name..."></td>
+                </tr>
+                <tr>
+                    <td>Event Venue: </td>
+                    <td><input id="new-event-venue" type="text" placeholder="Enter venue"></td>
+                </tr>
+                <tr>
+                    <td>Enter date: </td>
+                    <td><input id="new-event-date" type="date" placeholder="Enter date"></td>
+                </tr>
+                <tr>
+                    <td>Enter ticket price: </td>
+                    <td><input id="new-event-price" type="text" placeholder="Enter price"></td>
+                </tr>
+                <tr>
+                    <td>Enter image url: </td>
+                    <td><input id="eventimage" type="text" placeholder="Enter url"></td>
+                </tr>
+            </table>
+            <button type="button" id="add-event-button">Add event</button>
+
+        </form>
+
+    </div>
+    <div class="add-event-div" id="add-event-div">
+        <h1>Add your event now!</h1>
+        <button id="add-event-btn">Add event</button>
+    </div>
+
+    <div id="contact" class="contact">
+        <p>For more details - Contact: 9846264889 </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

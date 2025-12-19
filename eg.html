@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Toggle Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Menu button */
+    .menu-btn {
+      font-size: 22px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #6a5acd;
+      color: white;
+      border: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001; /* stays on top */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* hidden initially */
+      width: 250px;
+      height: 100%;
+      background: linear-gradient(180deg, #FFBFA8, #E6B3D9, #C1A7F0);
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Active (visible) sidebar */
+    .sidebar.active {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu button -->
+  <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Bookings</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
